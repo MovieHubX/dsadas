@@ -109,7 +109,7 @@ const Slider = () => {
   }
 
   return (
-    <Box mt={{ base: '55px', md: '0' }} mx="auto" w='full' maxW="full" h={{ base: '60vh', md: '80vh' }} zIndex="1">
+    <Box mt='55px' mx="auto" w='full' maxW="full" h={{ base: '60vh', md: '80vh' }}>
       <Swiper
         {...sliderSettings}
         style={{
@@ -151,7 +151,7 @@ const Slider = () => {
                       effect="blur"
                       mx="auto"
                       overflow="hidden"
-                      h="full"
+                      h={{ base: "60vh", md: "100%" }}
                       w="full"
                       fallback={<Box bg={'#333'} position='absolute' inset={'0'} />}
                       objectFit="cover"
@@ -188,8 +188,8 @@ const Slider = () => {
                         color="#fff"
                         fontWeight="extrabold"
                         fontSize={{
-                          base: "4xl",
-                          md: "4xl",
+                          base: "4xl", // Adjusted font size for mobile screens
+                          md: "5xl",
                           lg: "60px",
                         }}
                       >
@@ -204,8 +204,8 @@ const Slider = () => {
                       variants={variants}
                     >
                       <Text my='15px' fontSize={{
-                        base: '15px',
-                        md: '18px',
+                        base: '16px', // Adjusted font size for mobile screens
+                        md: '20px',
                       }}>{subString}</Text>
                     </motion.div>
                     {/* actions */}
@@ -263,7 +263,7 @@ const Slider = () => {
                     </motion.div>
                   </Box>
                   {/* score */}
-                  <Box pos='absolute' top='10%' right='4%' display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                  <Box pos='absolute' top='7%' right='4%' display={'flex'} alignItems={'center'} justifyContent={'center'}>
                     <Text
                       fontSize={{ base: '20px', md: '24px' }} color='#fff' fontWeight={'bold'}
                     >
