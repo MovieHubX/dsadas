@@ -109,7 +109,7 @@ const Slider = () => {
   }
 
   return (
-    <Box mt='55px' mx="auto" w='full' maxW="full" h={'80vh'}>
+    <Box mt={{ base: '55px', md: '0' }} mx="auto" w='full' maxW="full" h={{ base: '60vh', md: '80vh' }} zIndex="1">
       <Swiper
         {...sliderSettings}
         style={{
@@ -203,7 +203,7 @@ const Slider = () => {
                       transition={{ duration: 0.5, delay: 0.7, ease: "easeOut" }}
                       variants={variants}
                     >
-                      <Text my='20px' fontSize={{
+                      <Text my='15px' fontSize={{
                         base: '15px',
                         md: '18px',
                       }}>{subString}</Text>
@@ -212,7 +212,7 @@ const Slider = () => {
                     <motion.div
                       initial={{ opacity: 0, y: 50 }}
                       animate={i === activeSlide ? 'show' : 'hidden'}
-                      transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
+                      transition={{ duration: 0.5, delay: 0.9, ease: "easeOut" }}
                       variants={variants}
                     >
                       <Box
@@ -221,7 +221,7 @@ const Slider = () => {
                         alignItems='center' 
                         columnGap='4'
                         h={{ base: '45px', md: '55px' }}
-                        mt={{ base: '15%', md: '60px' }}
+                        mt={{ base: '5%', md: '40px' }}
                       >
                         <ButtonWhite href={`/${item?.media_type}/${item?.id}`} >
                           <BsFillPlayFill size={'30px'} style={{ marginRight: '10px' }} />
@@ -263,7 +263,7 @@ const Slider = () => {
                     </motion.div>
                   </Box>
                   {/* score */}
-                  <Box pos='absolute' top='7%' right='4%' display={'flex'} alignItems={'center'} justifyContent={'center'}>
+                  <Box pos='absolute' top='10%' right='4%' display={'flex'} alignItems={'center'} justifyContent={'center'}>
                     <Text
                       fontSize={{ base: '20px', md: '24px' }} color='#fff' fontWeight={'bold'}
                     >
